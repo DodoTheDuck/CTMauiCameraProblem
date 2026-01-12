@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pageModels="clr-namespace:CTMauiCameraProblem.PageModels"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:camera="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui.Camera"
+             x:Class="CTMauiCameraProblem.Pages.CameraPage"
+             x:DataType="pageModels:CameraPageModel"
+             x:Name="ThisPage"
+             Title="Camera">
+
+    <Grid RowDefinitions="*, Auto, Auto" Padding="15">
+
+        <!-- Camera Preview -->
+        <camera:CameraView x:Name="cameraView"
+                           Grid.Row="0"
+                           CameraFlashMode="Off"
+                           MediaCaptured="OnMediaCaptured" />
+
+        <!-- Captured Image Preview -->
+        <Border Grid.Row="0"
+                IsVisible="{Binding HasPhoto}"
+                BackgroundColor="{AppThemeBinding Light={StaticResource LightSecondaryBackground}, Dark={StaticResource DarkSecondaryBackground}}">
+            <Image Source="{Binding CapturedImage}"
+                   Aspect="AspectFit" />
+        </Border>
+
+        <!-- Capture Button -->
+        <Button Grid.Row="1"
+                Text="Foto aufnehmen"
+                Margin="0,15"
+                Clicked="OnCaptureClicked"
+                IsVisible="{Binding HasPhoto, Converter={toolkit:InvertedBoolConverter}}"
+                HorizontalOptions="Center"
+                WidthRequest="200"
+                HeightRequest="50" />
+
+        <!-- Clear Button -->
+        <Button Grid.Row="1"
+                Text="Neues Foto"
+                Margin="0,15"
+                Command="{Binding ClearPhotoCommand}"
+                IsVisible="{Binding HasPhoto}"
+                HorizontalOptions="Center"
+                WidthRequest="200"
+                HeightRequest="50" />
+
+        <!-- Status Label -->
+        <Label Grid.Row="2"
+               Text="Tippe auf den Button, um ein Foto aufzunehmen"
+               HorizontalOptions="Center"
+               IsVisible="{Binding HasPhoto, Converter={toolkit:InvertedBoolConverter}}" />
+
+    </Grid>
+
+</ContentPage>

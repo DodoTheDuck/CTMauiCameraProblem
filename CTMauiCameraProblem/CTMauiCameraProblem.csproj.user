@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <IsFirstTimeProjectOpen>False</IsFirstTimeProjectOpen>
+    <ActiveDebugFramework>net10.0-ios</ActiveDebugFramework>
+    <ActiveDebugProfile>Remote Device</ActiveDebugProfile>
+    <SelectedPlatformGroup>RemoteDevice</SelectedPlatformGroup>
+    <TargetiOSDevice>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;plist version="1.0"&gt;
+&lt;dict&gt;
+	&lt;key&gt;device&lt;/key&gt;
+	&lt;dict&gt;
+		&lt;key&gt;architecture&lt;/key&gt;
+		&lt;string&gt;ARMv6, ARMv7, ARMv7s, ARM64&lt;/string&gt;
+		&lt;key&gt;model&lt;/key&gt;
+		&lt;string&gt;iPhone18,1&lt;/string&gt;
+		&lt;key&gt;os-version&lt;/key&gt;
+		&lt;string&gt;26.2&lt;/string&gt;
+		&lt;key&gt;os&lt;/key&gt;
+		&lt;string&gt;iOS&lt;/string&gt;
+	&lt;/dict&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;
+</TargetiOSDevice>
+    <DeveloperId>7G7J4CK7BZ</DeveloperId>
+    <DevelopmentTeamId>7G7J4CK7BZ</DevelopmentTeamId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetPlatformIdentifier)'=='iOS'">
+    <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
+    <PlatformTarget>arm64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="App.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="AppShell.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Pages\Controls\AddButton.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Pages\Controls\CategoryChart.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Pages\Controls\ProjectCardView.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Pages\Controls\TagView.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Pages\Controls\TaskView.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Pages\MainPage.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Pages\ManageMetaPage.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Pages\ProjectDetailPage.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Pages\ProjectListPage.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Pages\TaskDetailPage.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Platforms\Windows\App.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Platforms\Windows\Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Resources\Styles\AppStyles.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Resources\Styles\Colors.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Resources\Styles\Styles.xaml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+</Project>
